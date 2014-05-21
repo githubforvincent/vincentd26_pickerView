@@ -22,6 +22,7 @@
 		12EC723D192CB951001847E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC721C192CB951001847E7 /* UIKit.framework */; };
 		12EC7245192CB951001847E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 12EC7243192CB951001847E7 /* InfoPlist.strings */; };
 		12EC7247192CB951001847E7 /* vincentd26_pickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EC7246192CB951001847E7 /* vincentd26_pickerViewTests.m */; };
+		12EC7252192CB9AF001847E7 /* VDEMyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EC7251192CB9AF001847E7 /* VDEMyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		12EC7242192CB951001847E7 /* vincentd26_pickerViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vincentd26_pickerViewTests-Info.plist"; sourceTree = "<group>"; };
 		12EC7244192CB951001847E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		12EC7246192CB951001847E7 /* vincentd26_pickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vincentd26_pickerViewTests.m; sourceTree = "<group>"; };
+		12EC7250192CB9AF001847E7 /* VDEMyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDEMyView.h; sourceTree = "<group>"; };
+		12EC7251192CB9AF001847E7 /* VDEMyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDEMyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				12EC722D192CB951001847E7 /* Main_iPad.storyboard */,
 				12EC7230192CB951001847E7 /* VDEViewController.h */,
 				12EC7231192CB951001847E7 /* VDEViewController.m */,
+				12EC7250192CB9AF001847E7 /* VDEMyView.h */,
+				12EC7251192CB9AF001847E7 /* VDEMyView.m */,
 				12EC7233192CB951001847E7 /* Images.xcassets */,
 				12EC721F192CB951001847E7 /* Supporting Files */,
 			);
@@ -256,6 +261,7 @@
 			files = (
 				12EC7229192CB951001847E7 /* VDEAppDelegate.m in Sources */,
 				12EC7225192CB951001847E7 /* main.m in Sources */,
+				12EC7252192CB9AF001847E7 /* VDEMyView.m in Sources */,
 				12EC7232192CB951001847E7 /* VDEViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
