@@ -30,16 +30,17 @@
     
     //configuration subview du fond
     //--------------------------------------------------------------------------------------------------------
-    //vdeImageEspace = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image2048_2048.png"]];
-    //vdeImageEspace = [[UIImageView alloc] init];
-    //[self addSubview:vdeImageEspace];
+    vdeImageEspace = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image2048_2048.png"]];
+	vdeImageEspace.alpha = 0.7;
+    [self addSubview:vdeImageEspace];
 	
     
     //configuration du picker
     //--------------------------------------------------------------------------------------------------------
     vdePickerView = [[UIPickerView alloc] init];
-	vdePickerView.delegate		= self;
-	vdePickerView.dataSource	= self;
+	vdePickerView.delegate			= self;
+	vdePickerView.dataSource		= self;
+	vdePickerView.backgroundColor	= [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
 	
     [self addSubview:vdePickerView];
 	
@@ -64,9 +65,9 @@
 	vdeLabelTexteDuPicker					= [[UILabel alloc ]init];
 	vdeLabelTexteDuPicker.TextAlignment		= NSTextAlignmentCenter;
 	vdeLabelTexteDuPicker.font				= [UIFont boldSystemFontOfSize:18.0];
-	vdeLabelTexteDuPicker.backgroundColor	= [UIColor colorWithRed:1 green:1 blue:1 alpha:0.6];
-	[self pickerView:vdePickerView didSelectRow:0 inComponent:0];
-	[self pickerView:vdePickerView didSelectRow:0 inComponent:1];
+	vdeLabelTexteDuPicker.backgroundColor	= [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+	[self pickerView:vdePickerView didSelectRow:0 inComponent:0]; // on initialise au premier terme
+	[self pickerView:vdePickerView didSelectRow:0 inComponent:1]; // on initiaise à la première couleur
 	[self addSubview:vdeLabelTexteDuPicker];
 	
 		
@@ -74,8 +75,6 @@
     //--------------------------------------------------------------------------------------------------------
     [self setFromOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
 	// on recupere l'orientation de la status bar pour connaitre l'orientation ( astuce UPMC )
-	
-    
     
     return self;
 }
@@ -84,7 +83,6 @@
 - (void) setFromOrientation:(UIInterfaceOrientation) o {
 	//--------------------------------------------------------------------------------------------------------
 	
-    
 	
 	// rafraichissement de la frame en fonction de l'orientation
 	//--------------------------------------------------------------------------------------------------------
@@ -112,9 +110,13 @@
     int vdeYLabelTexteDuPicker				= 35;
 	
     int vdeHauteurPickerView	= 180.0;
-	int vdeXPickerView			= 20;
-    int vdeYPickerView			= 90;
-    int vdeLargeurPickerView 	= vdeLargeurVue-40;
+	int vdeXPickerView			= 0;
+    int vdeYPickerView			= vdeHauteurVue/2-vdeHauteurPickerView/2;
+    int vdeLargeurPickerView 	= vdeLargeurVue;
+	
+	int vdeHauteurImageEspace	= vdeHauteurVue;
+	int vdeLargeurImageEspace	= vdeLargeurVue;
+	
     
     
     // placement des subviews
@@ -131,7 +133,10 @@
 													vdeHauteurPickerView)];
 	
     
-    
+    [vdeImageEspace				setFrame:CGRectMake(0,
+													0,
+													vdeLargeurImageEspace,
+													vdeHauteurImageEspace)];
 }
 
 //--------------------------------------------------------------------------------------------------------
@@ -156,8 +161,7 @@
 
 -(NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
 	//--------------------------------------------------------------------------------------------
-	// renvoi le contenu du composant
-	
+	// renvoi le titre de la ligne d'un composant pour la construction du picker
 	return [[vdeTableauPickerDonnees objectAtIndex:component] objectAtIndex:row];
 }
 

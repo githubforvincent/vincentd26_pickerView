@@ -22,6 +22,7 @@
 	
 	CGRect				vdeMaFrame;
 	BOOL				isIpad;
+	UIImageView			*vdeImageEspace;
 }
 - (void) setFromOrientation:(UIInterfaceOrientation) o;
 

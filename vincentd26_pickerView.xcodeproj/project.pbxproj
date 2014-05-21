@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121F8CD1192CD1DB001AC464 /* image2048_2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 121F8CD0192CD1DB001AC464 /* image2048_2048.png */; };
 		12EC7219192CB951001847E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC7218192CB951001847E7 /* Foundation.framework */; };
 		12EC721B192CB951001847E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC721A192CB951001847E7 /* CoreGraphics.framework */; };
 		12EC721D192CB951001847E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC721C192CB951001847E7 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121F8CD0192CD1DB001AC464 /* image2048_2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2048_2048.png; sourceTree = "<group>"; };
 		12EC7215192CB951001847E7 /* vincentd26_pickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vincentd26_pickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC7218192CB951001847E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12EC721A192CB951001847E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +127,7 @@
 				12EC7231192CB951001847E7 /* VDEViewController.m */,
 				12EC7250192CB9AF001847E7 /* VDEMyView.h */,
 				12EC7251192CB9AF001847E7 /* VDEMyView.m */,
+				121F8CD0192CD1DB001AC464 /* image2048_2048.png */,
 				12EC7233192CB951001847E7 /* Images.xcassets */,
 				12EC721F192CB951001847E7 /* Supporting Files */,
 			);
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12EC722F192CB951001847E7 /* Main_iPad.storyboard in Resources */,
+				121F8CD1192CD1DB001AC464 /* image2048_2048.png in Resources */,
 				12EC7234192CB951001847E7 /* Images.xcassets in Resources */,
 				12EC722C192CB951001847E7 /* Main_iPhone.storyboard in Resources */,
 				12EC7223192CB951001847E7 /* InfoPlist.strings in Resources */,
@@ -477,6 +481,7 @@
 				12EC724C192CB951001847E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12EC724D192CB951001847E7 /* Build configuration list for PBXNativeTarget "vincentd26_pickerViewTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +490,7 @@
 				12EC724F192CB951001847E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
